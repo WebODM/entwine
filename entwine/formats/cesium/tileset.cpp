@@ -19,7 +19,7 @@ namespace cesium
 {
 
 Tileset::Tileset(const json& config)
-    : m_endpoints(Endpoints( std::make_shared<arbiter::Arbiter>(config), config::getInput(config).front(), config::getTmp(config)))
+    : m_endpoints(Endpoints( std::make_shared<arbiter::Arbiter>(""), config::getInput(config).front(), config::getTmp(config)))
     , m_in(m_endpoints.arbiter->getEndpoint(config::getInput(config).front()))
     , m_out(m_endpoints.arbiter->getEndpoint(config::getOutput(config)))
     , m_tmp(m_endpoints.arbiter->getEndpoint(config::getTmp(config))) 
