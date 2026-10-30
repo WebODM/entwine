@@ -11,7 +11,7 @@ endif()
 
 function(compiler_options target)
     system_compiler_options(${target})
-    set_property(TARGET ${target} PROPERTY CXX_STANDARD 11)
+    set_property(TARGET ${target} PROPERTY CXX_STANDARD 17)
     set_property(TARGET ${target} PROPERTY CXX_STANDARD_REQUIRED TRUE)
     set_property(TARGET ${target} PROPERTY POSITION_INDEPENDENT_CODE TRUE)
     target_compile_definitions(${target}
